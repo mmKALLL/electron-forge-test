@@ -1,14 +1,14 @@
 {
   "main": "./game/main.js",
-  "id": "2131238",
+  "id": "invasion-game",
   "description": "Game in development. Travel a hostile world while looking for a way to usurp the Mad King. The game is developed using JavaScript, Pixi.js and a custom Entity-Component-System implementation",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "mmKALLL",
+  "license": "all rights reserved",
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-preset-env": "^1.6.0",
@@ -41,25 +41,27 @@
           "squirrel"
         ],
         "darwin": [
-          "zip"
+          "zip",
+		  "dmg"
         ],
         "linux": [
           "deb",
-          "rpm"
+          "rpm",
+		  "zip"
         ]
       },
       "electronPackagerConfig": {},
       "electronWinstallerConfig": {
-        "name": ""
+        "name": "invasion-game"
       },
       "electronInstallerDebian": {},
       "electronInstallerRedhat": {},
       "github_repository": {
-        "owner": "",
-        "name": ""
+        "owner": "mmKALLL",
+        "name": "oaa"
       },
       "windowsStoreConfig": {
-        "packageName": ""
+        "packageName": "invasion-game"
       }
     }
   }
