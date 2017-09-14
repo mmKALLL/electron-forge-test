@@ -1,31 +1,31 @@
 {
-  "main": "main.js",
+  "main": "./main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
-
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "~1.6.2"
+    "electron-prebuilt-compile": "1.6.13"
   },
-  
   "name": "invasion-game",
-  "version": "1.0",
-  "main": "main.js",
-
-
+  "version": "1.0.0",
   "eslintConfig": {
-    
     "root": true,
-    
     "env": {
       "browser": true
     },
-
     "rules": {
-      "quotes": ["warn", "double"],
+      "quotes": [
+        "warn",
+        "double"
+      ],
       "semi": "warn"
     }
+  },
+  "dependencies": {
+    "electron-compile": "^6.4.1"
   }
 }
