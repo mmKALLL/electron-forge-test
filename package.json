@@ -1,5 +1,5 @@
 {
-  "main": "./main.js",
+  "main": "./game/main.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -8,6 +8,10 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^4.0.2",
     "electron-prebuilt-compile": "1.6.13"
   },
   "name": "invasion-game",
@@ -27,5 +31,34 @@
   },
   "dependencies": {
     "electron-compile": "^6.4.1"
+  },
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {},
+      "electronWinstallerConfig": {
+        "name": ""
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": ""
+      }
+    }
   }
 }
